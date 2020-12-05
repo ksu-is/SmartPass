@@ -1,4 +1,4 @@
-# Password Generator Project Roadman
+# Password Generator Project Roadmap
 
 ## Sprint 1:
 - [x] Project idea approved by Professor Thomas
@@ -16,9 +16,9 @@
 - [x] Add extra buttons
 
 ## Sprint 3
-- [ ] Final code test to make sure
-- [ ] Screenshot project demonstration
-- [ ] Create and upload project slide
+- [x] Final code test to make sure
+- [x] Screenshot project demonstration
+- [x] Create and upload project slide
 
 ## Final Presentation
 - [ ]

@@ -64,11 +64,11 @@ root.title("Welcome to SmartPass!")
 Random_password = Label(root, text="Password") 
 Random_password.grid(row=0) 
 entry = Entry(root) 
-entry.grid(row=0, column=1) 
+entry.grid(row=1) 
 
 # create label for length of password 
-c_label = Label(root, text="Length") 
-c_label.grid(row=2) 
+combo_label = Label(root, text="Length") 
+combo_label.grid(row=2) 
 
 # Combo Box for length of your password 
 combo = Combobox(root, textvariable=var1) 
@@ -77,29 +77,31 @@ combo['values'] = (8, 9, 10, 11, 12, 13, 14, 15, 16,
 				26, 27, 28, 29, 30, 31, 32, "Length") 
 combo.current(0) 
 combo.bind('<<ComboboxSelected>>') 
-combo.grid(column=1, row=2) 
+combo.grid(row=3) 
 
 # create Buttons Clear which will Clear 
 # Generate which will generate the password 
 clear_button = Button(root, text="Clear", command=clear_text) 
-clear_button.grid(row=5, column=1) 
+clear_button.grid(row=9) 
 generate_button = Button(root, text="Generate", command=generate) 
-generate_button.grid(row=5, column=2) 
+generate_button.grid(row=8) 
 
 # Radio Buttons for deciding the 
 # strength of password 
 # Default strength is Medium 
+strength_label = Label(root, text="Password Strength")
+strength_label.grid(row=4)
 radio_low = Radiobutton(root, text="Low", variable=var, value=1) 
-radio_low.grid(row=4, column=1, sticky='E') 
+radio_low.grid(row=5, sticky='W') 
 radio_middle = Radiobutton(root, text="Medium", variable=var, value=0) 
-radio_middle.grid(row=4, column=2, sticky='E') 
+radio_middle.grid(row=6, sticky='W') 
 radio_strong = Radiobutton(root, text="Strong", variable=var, value=3) 
-radio_strong.grid(row=4, column=3, sticky='E') 
+radio_strong.grid(row=7, sticky='W') 
 
 
 
 # specify the GUI window dimensions
-root.geometry("600x650")
+root.geometry("230x300")
 
 # start the GUI 
 root.mainloop() 

@@ -1,5 +1,9 @@
-# Python program to generate random 
-# password using Tkinter module 
+# Zeynab Hassan
+# IS 3020
+# End of Semester Project
+# 'SmartPass' Password Generator
+
+
 import random 
 from tkinter import *
 from tkinter.ttk import *
@@ -10,10 +14,12 @@ def low():
 
 	# Get the length of passowrd 
 	length = var1.get() 
-
+    # string containing possible lowercase letters
 	lower = "abcdefghijklmnopqrstuvwxyz"
+    # string containing possible uppercase letters + lower
 	upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-	digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !@#$%^&*()"
+    # string containing possible integers and symbols + uppercase letters + lower
+	digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
 	password = "" 
 
 	# if strength selected is low 
@@ -49,7 +55,7 @@ def clear_text():
 
 
 
-# Main Function 
+# Main Code Section 
 
 # create GUI window 
 root = Tk() 
@@ -72,6 +78,7 @@ combo_label.grid(row=2)
 
 # Combo Box for length of your password 
 combo = Combobox(root, width=10, textvariable=var1) 
+# array holding possible combo values in dropbox
 combo['values'] = (8, 9, 10, 11, 12, 13, 14, 15, 16, 
 				17, 18, 19, 20, 21, 22, 23, 24, 25, 
 				26, 27, 28, 29, 30, 31, 32) 
@@ -100,11 +107,14 @@ radio_middle.grid(row=6, sticky='N')
 radio_strong = Radiobutton(root, text="Strong", variable=var, value=3) 
 radio_strong.grid(row=7, sticky='N') 
 
+# function to close GUI
 def close_screen():
     root.destroy()
 
+# blank label
 blank_label2 = Label(root, text="--------------------")
 blank_label2.grid(row=11)
+# button to call close_screen function 
 kill_button = Button(root, text="Close Window", command=close_screen)
 kill_button.grid(row=12)
 

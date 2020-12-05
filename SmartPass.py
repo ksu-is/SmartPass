@@ -100,10 +100,17 @@ radio_middle.grid(row=6, sticky='N')
 radio_strong = Radiobutton(root, text="Strong", variable=var, value=3) 
 radio_strong.grid(row=7, sticky='N') 
 
+def close_screen():
+    root.destroy()
+
+blank_label2 = Label(root, text="--------------------")
+blank_label2.grid(row=11)
+kill_button = Button(root, text="Close Window", command=close_screen)
+kill_button.grid(row=12)
 
 
 # specify the GUI window dimensions
-root.geometry("230x300")
+root.geometry("220x320")
 
 # start the GUI 
 root.mainloop() 

@@ -1,7 +1,6 @@
 # Python program to generate random 
 # password using Tkinter module 
 import random 
-import pyperclip 
 from tkinter import *
 from tkinter.ttk import *
 
@@ -44,7 +43,7 @@ def generate():
 	entry.insert(10, password1) 
 
 
-# Function for copying password to clipboard 
+# Function for clearing generated password 
 def clear_text(): 
 	entry.delete(0, END)
 
